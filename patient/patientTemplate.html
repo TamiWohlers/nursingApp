@@ -1,0 +1,25 @@
+<h3>Big Sky Hospice</h3>
+<h4>Nurse Visit Form</h4>
+<form> Date of Visit:
+    <input type="date" name="visit">
+</form>
+<form>
+    <input type="radio" name="visit" value="initial" checked>Initial/Intake</intake <br>
+    <input type="radio" name="visit" value="regular">Regular</input>
+    <input type="radio" name="visit" value="emergency">Emergency/On-call</input>
+</form>
+<div class='mileage calculation'>
+    <input placeholder="Mileage" type="value" ng-model="miles"></input>
+    <button ng-click="mileageCalc(miles)">
+        </calcReim>Submit</button>
+    <div class="money">reimbursement: ${{reimbursement}}</div>
+</div>
+<!-- <select ng-model="currentPerson" ng-change=displayPtInfo(currentPerson)>
+    <option>Wanda Smith</option>
+    <option>Clyde Brothers</option>
+    <option>Larry Olsen</option>
+</select> -->
+<div class="patientList" ng-repeat="patient in patientList">{{patient.person}} {{patient.diagnosis}}</div>
+<input placeholder="select pt" ng-model="ptName" type="text"></input>
+<button class="submitButton" ng-click=findPatient(ptName)>Submit</button>
+<div class="ptFound">Patient: {{ptSearch}}
