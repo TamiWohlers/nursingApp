@@ -12,7 +12,17 @@ app.service('patientService', function() {
                 ID: 2,
                 person: 'Larry Olsen',
                 diagnosis: 'liver failure'
-            }
+            },
+                {
+                ID: 3,
+                person: 'Hillary Buck',
+                diagnosis: 'melanoma'
+                },
+                {
+                ID: 4,
+                person: 'May Hoppe',
+                diagnosis: "CHF"
+                }
             ];
 
             this.mileageCalc = function(numMiles) {

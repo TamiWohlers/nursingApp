@@ -1,1 +1,45 @@
-{{test}}
+<form>
+<h3 class='VitalSigns'>Vital Signs</h3>
+<div class='BP'>
+    <input placeholder="BP" type="text" ng-model="bloodPressure">
+</div>
+<div>
+    </input>
+    <input placeholder="HR" type="text" ng-model="heartRate"></input>
+</div>
+<div>
+    <input placeholder="R" type="text" ng-model="respirations"></input>
+</div>
+<div>
+    <input type="date" name="last BM">last BM
+</div>
+</form>
+<form ng-model = "bowelSounds">bowel sounds
+    <input type="radio" name="visit" value="hypoactive" checked>hypoactive</intake <br>
+    <input type="radio" name="visit" value="normoactive">normoactive</input>
+    <input type="radio" name="visit" value="hyperactive">hyperactive</input>
+</form>
+<form ng-model = "breathSounds">breath sounds
+    <input type="radio" name="visit" value="clear" checked>clear</intake <br>
+    <input type="radio" name="visit" value="diminished">diminished</input>
+    <input type="radio" name="visit" value="crackles">crackles
+    </input>
+    <input type="radio" name="visit" value = "rattle">rattle</input> 
+    </form>
+</form>
+<form ng-model = "edema">edema
+    <input type="radio" value="none" checked>none</intake <br>
+    <input type="radio" value="1+">1+</input>
+    <input type="radio" value="2+">2+</input>
+    <input type="radio" value = "3+">3+</input> 
+    </form>
+<div>Pain 0-10
+<input type="value" ng-model = "painScale">
+<div>
+
+<textarea placeholder="nurse's note"></textarea>
+<div>
+<button ng-click="printBP(bloodPressure)">Submit</button>
+</div>
+</div>
+
