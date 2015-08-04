@@ -1,4 +1,4 @@
 var app = angular.module('app');
 
-app.controller('assessmentCtrl', function($scope, assessmentService, finalDraft){
+app.controller('assessmentCtrl', function($scope, assessmentService){
   });

@@ -9,9 +9,8 @@ app.controller('patientCtrl', function($scope, patientService){
 
 $scope.findPatient = function(ptName){
       $scope.ptSearch = patientService.findPatient(ptName) 
-  }
-  });
-
+  };
+});
   
   // $scope.displayPtInfo = function(selection) {
   // 	console.log('before display ', selection);

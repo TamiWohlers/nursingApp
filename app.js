@@ -16,6 +16,13 @@ app.config(function($routeProvider) {
                 // 	  return teamService.getTeamData($route.current.params.team);
                 //   }
         })
+        .when('/DME', {
+            templateUrl: 'durableMedicalEquipment/DMETemplate.html',
+            controller: 'DMEcontroller'
+        })
+        .when('/patientDisplay',{
+            templateUrl: '/directives/patientDisplay.html'
+        })
         .otherwise({
             redirectTo: '/patient'
         });

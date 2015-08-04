@@ -1,12 +1,12 @@
 <h3>Big Sky Hospice</h3>
 <h4>Nurse Visit Form</h4>
-<form> Date of Visit:
+<form class="patientForm"> Date of Visit:
     <input type="date" name="visit">
 </form>
-<form>
-    <input type="radio" value="initial" checked>Initial/Intake</intake <br>
-    <input type="radio" value="regular">Regular</input>
-    <input type="radio" value="emergency">Emergency/On-call</input>
+<form ng-model = "typeOfVisit">Type of visit
+    <input type="radio" name="visit" value="intake/initial" checked>intake/initial</intake <br>
+    <input type="radio" name="visit" value="regular">regular/scheduled</input>
+    <input type="radio" name="visit" value="emergency/call">emergency/call</input>
 </form>
 <div class='mileage calculation'>
     <input placeholder="Mileage" type="value" ng-model="miles"></input>
@@ -19,7 +19,12 @@
     <option>Clyde Brothers</option>
     <option>Larry Olsen</option>
 </select> -->
-<div class="patientList" ng-repeat="patient in patientList">{{patient.person}} {{patient.diagnosis}}</div>
+<div class="patientList" ng-repeat="patient in patientList">{{patient.person}} {{patient.diagnosis}} ICD-9: {{patient.ICD9code}}</div>
 <input placeholder="select pt" ng-model="ptName" type="text"></input>
 <button class="submitButton" ng-click=findPatient(ptName)>Submit</button>
 <div class="ptFound">Patient: {{ptSearch}}
+</div>
+<div>
+<!-- <a href = "/assessment/assessmentTemplate">PerformAssessment</a> -->
+
+</div>

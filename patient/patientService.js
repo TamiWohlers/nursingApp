@@ -3,25 +3,30 @@ app.service('patientService', function() {
             {
                 ID: 0,
                 person: 'Wanda Smith',
-                diagnosis: 'lung cancer'
+                diagnosis: 'lung cancer',
+                ICD9code: '162.3'
             }, {
                 ID: 1,
                 person: 'Clyde Brothers',
-                diagnosis: 'AIDS'
+                diagnosis: 'AIDS',
+                ICD9code: '042'
             }, {
                 ID: 2,
                 person: 'Larry Olsen',
-                diagnosis: 'liver failure'
+                diagnosis: 'liver failure',
+                ICD9code:  '571.2'
             },
                 {
                 ID: 3,
                 person: 'Hillary Buck',
-                diagnosis: 'melanoma'
+                diagnosis: 'brain cancer',
+                ICD9code: '191.7'
                 },
                 {
                 ID: 4,
                 person: 'May Hoppe',
-                diagnosis: "CHF"
+                diagnosis: "CHF",
+                ICD9code: '428.0'
                 }
             ];
 

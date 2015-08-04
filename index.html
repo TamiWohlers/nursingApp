@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html ng-app='app'>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div ng-view></div>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-	<script src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
-	<script src="app.js"></script>
-	<script src="assessment/assessmentController.js"></script>
-	<script src="assessment/assessmentService.js"></script>
-	<script src="patient/patientController.js"></script>
-	<script src="patient/patientService.js"></script>
-	<script src="finalDraft.js"></script>
 
+<head>
+    <title>Hospice</title>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<ul>
+  <li><a href="/#/patient">Home</a></li>
+  <li><a href="/#/assessment">Assessment</a></li>
+  <li><a href="/#/DME">DME</a></li>
+</ul>
 </body>
+<div ng-view></div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+<script src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="assessment/assessmentController.js"></script>
+<script src="assessment/assessmentService.js"></script>
+<script src="patient/patientController.js"></script>
+<script src="patient/patientService.js"></script>
+<script src="finalDraft.js"></script>
+<script src="durableMedicalEquipment/DMEController.js"></script>
+<script src="durableMedicalEquipment/DMEService.js"></script>
+<script src="directives/patientDisplay.js" </script>
+</body>
+</html>
