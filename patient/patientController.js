@@ -8,8 +8,14 @@ app.controller('patientCtrl', function($scope, patientService){
   $scope.patientList = patientService.patientData;
 
 $scope.findPatient = function(ptName){
-      $scope.ptSearch = patientService.findPatient(ptName) 
+      $scope.ptSearch = patientService.findPatient(ptName); 
+      patientService.setPatient(ptName)
   };
+$scope.date = new Date();
+
+// $scope.selectPt = function(patient){
+//   return  patient; 
+// }
 });
   
   // $scope.displayPtInfo = function(selection) {

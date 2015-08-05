@@ -1,46 +1,57 @@
+<get-date></get-date>
 <form>
+{{getPatient}}
 <h3 class='VitalSigns'>Vital Signs</h3>
 <div class='BP'>
-    <input placeholder="BP" type="text" ng-model="bloodPressure">
+    <input placeholder="BP" type="text" ng-model="assessment.bloodPressure">
 </div>
 <div>
     </input>
-    <input placeholder="HR" type="text" ng-model="heartRate"></input>
+    <input placeholder="HR" type="text" ng-model="assessment.heartRate"></input>
 </div>
 <div>
-    <input placeholder="R" type="text" ng-model="respirations"></input>
+    <input placeholder="R" type="text" ng-model="assessment.respirations"></input>
 </div>
 <div>
-    <input type="date" name="last BM">last BM
+    <input type="date" name="last BM" ng-model="assessment.BM">last BM
 </div>
 </form>
-<form ng-model = "bowelSounds" class="radio">bowel sounds
-    <input type="radio" name="visit" value="hypoactive" checked>hypoactive</intake <br>
-    <input type="radio" name="visit" value="normoactive">normoactive</input>
-    <input type="radio" name="visit" value="hyperactive">hyperactive</input>
-</form>
-<form ng-model = "breathSounds" class="radio">breath sounds
-    <input type="radio" name="visit" value="clear" checked>clear</intake <br>
-    <input type="radio" name="visit" value="diminished">diminished</input>
-    <input type="radio" name="visit" value="crackles">crackles
+<div class="radio">bowel sounds
+    <input type="radio" name="bowelSounds" value="hypoactive" ng-model="assessment.bowelSounds" checked>hypoactive</intake <br>
+    <input type="radio" name="bowelSounds" value="normoactive" ng-model="assessment.bowelSounds">normoactive</input>
+    <input type="radio" name="bowelSounds" value="hyperactive" ng-model="assessment.bowelSounds"
+    >hyperactive</input>
+</div>
+<div class="radio">lung sounds
+    <input type="radio" name="lungSounds" value="clear" ng-model="assessment.lungSounds" checked>clear</intake <br>
+    <input type="radio" name="lungSounds" value="diminished" ng-model="assessment.lungSounds">diminished</input>
+    <input type="radio" name="lungSounds" value="crackles" ng-model="assessment.lungSounds"
+    >crackles</input>
+    <input type="radio" name="lungSounds" value="rattle" ng-model="assessment.bowelSounds">rattle</input>
+</div>
+
+<!-- <form class="radio">breath sounds
+    <input type="radio" name="visit" value="clear" checked ng-model = "assessment.breathSounds">clear</intake <br>
+    <input type="radio" name="visit" value="diminished" ng-model = "assessment.breathSounds">diminished</input>
+    <input type="radio" name="visit" value="crackles" ng-model = "assessment.breathSounds">crackles
     </input>
-    <input type="radio" name="visit" value = "rattle">rattle</input> 
-    </form>
-</form>
-<form ng-model = "edema" class="radio">edema
-    <input type="radio" value="none" checked>none</intake <br>
-    <input type="radio" value="1+">1+</input>
-    <input type="radio" value="2+">2+</input>
-    <input type="radio" value = "3+">3+</input> 
-    </form>
+    <input type="radio" name="visit" value = "rattle" ng-model = "assessment.breathSounds">rattle</input> 
+    </form> -->
+<div class="radio">edema
+    <input type="radio" name="edema" value="none" ng-model="assessment.edema" checked>none</intake <br>
+    <input type="radio" name="edema" value="1+" ng-model="assessment.edema">1+</input>
+    <input type="radio" name="edema" value="2+" ng-model="assessment.edema">2+</input>
+    <input type="radio" name="edema" value="3+ " ng-model="assessment.edema">3+</input>
+</div>
 <div>Pain 0-10
-<input type="value" ng-model = "painScale">
+<input type="value" ng-model = "assessment.painScale">
 <div>
 
-<textarea placeholder="nurse's note"></textarea>
+<textarea placeholder="nurse's note" ng-model="assessment.note"></textarea>
 <div>
-<button ng-click="">Submit</button>
+<button ng-click="saveData(assessment)" >Submit</button>
 </div>
+<hospice-name></hospice-name>
 <!-- <a href="/durableMedicalEquipment/DMETemplate">Order DME</a> -->
 
 <!-- Nebulizer and circuit

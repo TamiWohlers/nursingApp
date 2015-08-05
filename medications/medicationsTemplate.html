@@ -1,0 +1,26 @@
+<get-date></get-date>
+{{getPatient}}
+<h3>Medication List</h3>
+
+<div>
+   <!--  <button ng-click="quoteAdd(quoteText, authorName)">Generic List</button>
+    <button ng-click="quoteAdd(quoteText, authorName)">Name Brand</button> -->
+	</div>
+	</div>
+    <input placeholder = "Find" type = "text" ng-model = "find"></input>
+  </div>
+  <button ng-click="show = !show">Generic/Name Brand Toggle</button>
+  <div ng-show="show" ng-repeat = "medication in getMeds| filter:find">
+      {{medication.brandName}}
+  </div>
+  <div ng-show="!show" ng-repeat = "medication in getMeds | filter:find">
+      {{medication.genericName}}
+  </div>
+  <button ng-click="getMedicationDosage(find)">Submit	</button>
+
+  <!-- <input type="checkbox" name="medications" value="Ativan">Ativan<br>
+  <input type="checkbox" name="medications" value="Roxanol">Roxanol<br>
+  <input type="checkbox" name="medications" value="Imodium">Imodium<br>
+   -->
+  <hospice-name></hospice-name>
+

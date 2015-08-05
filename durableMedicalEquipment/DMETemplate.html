@@ -1,14 +1,12 @@
+<get-date></get-date>
+{{getPatient}}
 <h3>Durable Medical Equipment</h3>
+
 <form class="DME list">
-  <input type="checkbox" name="DME" value="Oxygen Concentrator">Oxygen Concentrator<br>
-  <input type="checkbox" name="DME" value="Bed">Bed<br>
-  <input type="checkbox" name="DME" value="Patient Lift">Patient Lift<br>
-  <input type="checkbox" name="DME" value="IPPB Pump">IPPB Pump<br>
-  <input type="checkbox" name="DME" value="IV Pole">IV Pole<br>
-  <input type="checkbox" name="DME" value="Walker">Walker<br>
-  <input type="checkbox" name="DME" value="Wheelchair">Wheelchair<br>
-  <input type="checkbox" name="DME" value="Quad Cane">Quad Cane<br>
-  <input type="checkbox" name="DME" value="Bedside Commode">Bedside Commode<br>
-  <input type="checkbox" name="DME" value="Over bed Table">Over bed Table<br>
-  <input type="submit" value="Submit">
-</form>	
+
+  <div ng-repeat="equipment in DME">
+    <input type="checkbox" ng-model="equipment.check">{{equipment.itemName}}
+</div>
+
+<button ng-click="submit()">submit</button>
+

@@ -34,7 +34,8 @@ app.service('patientService', function() {
                     var reimbursement = numMiles * .50;
                     return reimbursement;
                 }
-                // this.displayPtInfo = function(selection) {
+
+              // this.displayPtInfo = function(selection) {
                 // 	return this.patientData[id];
                 // }
 
@@ -47,7 +48,7 @@ app.service('patientService', function() {
                     console.log("ptName", ptName)
                     if(ptName == this.patientData[i].person) {
                     	found = true;
-          				return ptName;
+          				return this.patientData[i];
                     }
 
                     
@@ -55,5 +56,13 @@ app.service('patientService', function() {
                if(found === false) {
                	return "pt not found";
                }
+            }
+            var currentPatient;
+
+            this.setPatient = function(ptName){
+                currentPatient = ptName;
+            }
+            this.getPatient = function(){
+                return(currentPatient)
             }
         });

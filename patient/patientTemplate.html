@@ -1,5 +1,17 @@
+<get-date></get-date>
 <h3>Big Sky Hospice</h3>
 <h4>Nurse Visit Form</h4>
+<!-- <div>Click on patient below to choose</div> -->
+<!-- <div class = "patients" ng-repeat = "patient in patientList">
+      <div ng-click="selectPt(patient)">{{patient.person}} {{patient.dignosis}} {{patient.ICD9code}}</div>
+  </div> -->
+<div class="patients" ng-repeat = "patient in patientList | filter:find">
+  {{patient.person}}
+</div>
+<input placeholder = "Find patient" type = "text" ng-model = "ptName"></input>  
+<button ng-click="findPatient(ptName)">Submit</button> 
+  Pt Selected: {{ptSearch.person}} {{ptSearch.ICD9code}} {{ptSearch.diagnosis}}
+  </div>
 <form class="patientForm"> Date of Visit:
     <input type="date" name="visit">
 </form>
@@ -10,21 +22,13 @@
 </form>
 <div class='mileage calculation'>
     <input placeholder="Mileage" type="value" ng-model="miles"></input>
-    <button ng-click="mileageCalc(miles)">
-        </calcReim>Submit</button>
-    <div class="money">reimbursement: ${{reimbursement}}</div>
+<button ng-click="mileageCalc(miles)">
+      </calcReim>Submit</button>
+<div class="money">reimbursement: ${{reimbursement}}</div>
 </div>
-<!-- <select ng-model="currentPerson" ng-change=displayPtInfo(currentPerson)>
-    <option>Wanda Smith</option>
-    <option>Clyde Brothers</option>
-    <option>Larry Olsen</option>
-</select> -->
-<div class="patientList" ng-repeat="patient in patientList">{{patient.person}} {{patient.diagnosis}} ICD-9: {{patient.ICD9code}}</div>
-<input placeholder="select pt" ng-model="ptName" type="text"></input>
-<button class="submitButton" ng-click=findPatient(ptName)>Submit</button>
-<div class="ptFound">Patient: {{ptSearch}}
-</div>
-<div>
-<!-- <a href = "/assessment/assessmentTemplate">PerformAssessment</a> -->
+
 
 </div>
+  
+<hospice-name></hospice-name> 
+  

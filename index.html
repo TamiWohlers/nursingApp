@@ -4,6 +4,7 @@
 <head>
     <title>Hospice</title>
     <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
@@ -12,6 +13,7 @@
   <li><a href="/#/patient">Home</a></li>
   <li><a href="/#/assessment">Assessment</a></li>
   <li><a href="/#/DME">DME</a></li>
+  <li><a href="/#/medications">Medications</a><li>
 </ul>
 </body>
 <div ng-view></div>
@@ -25,6 +27,10 @@
 <script src="finalDraft.js"></script>
 <script src="durableMedicalEquipment/DMEController.js"></script>
 <script src="durableMedicalEquipment/DMEService.js"></script>
-<script src="directives/patientDisplay.js" </script>
+<script src="directives/hospiceName.js"></script>
+<script src="medications/medicationsController.js"></script>
+<script src="medications/medicationsService.js"></script>
+<script src="directives/getDate.js"></script>
+<script src="medications/medicationsDosages.js"></script>
 </body>
 </html>
